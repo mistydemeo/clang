@@ -69,3 +69,6 @@ void Struct::method(<#Struct &x#>, noSupressionHere) { // expected-error {{unkno
   // expected-error@-2 {{editor placeholder in source file}}
 #endif
 }
+
+// This should *not* be detected as a placeholder
+<#> // expected-error {{expected expression}}

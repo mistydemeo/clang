@@ -365,7 +365,7 @@ public:
   ///   function(<#int x#>);
   /// \endcode
   bool isEditorPlaceholder() const {
-    return getName().startswith("<#") && getName().endswith("#>");
+    return getName().startswith("<#") && getName().endswith("#>") && getName().count("#") > 1;
   }
 
   /// \brief Provide less than operator for lexicographical sorting.
